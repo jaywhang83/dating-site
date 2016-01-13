@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
@@ -18,17 +18,17 @@
       <p>To give you a match, we need to know a little about you:</p>
 
       <form id="dating">
-        <div class="form-group has-warning">
+        <div class="form-group has-error">
           <label class="control-label" for="inputWarning1">Input with warning</label>
           <p>What is your favorite food?</p>
           <input type="text" class="form-control" id="favorite-food">
         </div>
-        <div class="form-group has-warning">
+        <div class="form-group has-error">
           <label class="control-label" for="inputWarning1">Input with warning</label>
           <p>What is your favorite shape?</p>
           <input type="text" class="form-control" id="favorite-shape">
         </div>
-        <div class="form-group has-warning">
+        <div class="form-group has-error">
           <label class="control-label" for="inputWarning1">Input with warning</label>
           <p>What is your favorite color?</p>
           <input type="text" class="form-control" id="favorite-color">
@@ -36,17 +36,23 @@
 
         <label for="age">Age</label>
         <input id="age" type="text">
-        <label for="gender">Gender</label>
+        <label for="gender">Gender you're looking for</label>
         <select id="gender">
           <option value="female">Female</option>
           <option value="male">Male</option>
+          <option value="undecided">No preference</option>
         </select>
 
         <button type="submit" class="btn">Calculate my date</button>
       </form>
 
       <div id="quote">
-        <p>You will have to pay $<span id="food"></span> per month to get car insurance. You should probably just bike or take the bus.</p>
+        <p>Your favorite food is <span id="food"></span> </p>
+        <p>Your favorite color is <span id="color"></span> </p>
+        <p>Your favorite shape is <span id="shape"></span> </p>
+        <p>Your preferred gender is <span id="gender-choice"></span> </p>
+        <p>Your age is <span id="age-input"></span> </p>
+        <h2>your dream date is <span id="answer"></span> </h2>
       </div>
     </div>
   </body>
