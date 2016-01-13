@@ -7,43 +7,49 @@ $(document).ready(function(){
 
     var gender =$("select#gender").val();
 
-    var menArray =["King Henry VIII", "Vlad the Impaler", "Prince George", "Prince William"];
-    var womenArray =["Ada Lovelace", "Queen Vicoria", "Joan of Arc", "Eleanor of Aquitaine"]
+
+    var menArray =["Prince George", "King Henry VIII", "Vlad the Impaler"];
+    var womenArray =[ "Joan of Arc", "Eleanor of Aquitaine", "Queen Vicoria"];
+
 
     if (food && shape && color) {
       if (age <= 18 && gender === "male") {
-        var answer = menArray[2];
+        var answer = menArray[0];
+        $("#george").show();
       }
       else if (age > 18 && gender === "male") {
         var answer = menArray[1];
+        $("#henry").show();
       }
       else if (age <= 18 && gender === "female") {
-        var answer = womenArray[2];
+        var answer = womenArray[0];
+        $("#joan").show();
       }
       else if (age > 18 && gender === "female") {
-        var answer = womenArray[0];
+        var answer = womenArray[1];
+        $("#eleanor").show();
       }
       else if (age <= 18 && gender === "undecided") {
-        var answer = womenArray[3];
+        var answer = womenArray[2];
+        $("#victoria").show();
       }
       else if (age > 18 && gender === "undecided") {
-        var answer = menArray[1];
+        var answer = menArray[2];
+        $("#vlad").show();
+
       }
+      $("#food").text(food);
+      $("#shape").text(shape);
+      $("#color").text(color);
+      $("#gender-choice").text(gender);
+      $("#age-input").text(age);
+      $("#answer").text(answer)
 
-
+      $("#quote").show();
     }
     else{
-
+      alert("You forgot to fill in a box! We cannot match you accurately if all answes are not ptovided.");
     }
-
-    $("#food").text(food);
-    $("#shape").text(shape);
-    $("#color").text(color);
-    $("#gender-choice").text(gender);
-    $("#age-input").text(age);
-    $("#answer").text(answer)
-
-    $("#quote").show();
 
     event.preventDefault();
   });

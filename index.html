@@ -18,18 +18,15 @@
       <p>To give you a match, we need to know a little about you:</p>
 
       <form id="dating">
-        <div class="form-group has-error">
-          <label class="control-label" for="inputWarning1">Input with warning</label>
+        <div class="form-group">
           <p>What is your favorite food?</p>
           <input type="text" class="form-control" id="favorite-food">
         </div>
-        <div class="form-group has-error">
-          <label class="control-label" for="inputWarning1">Input with warning</label>
+        <div class="form-group">
           <p>What is your favorite shape?</p>
           <input type="text" class="form-control" id="favorite-shape">
         </div>
-        <div class="form-group has-error">
-          <label class="control-label" for="inputWarning1">Input with warning</label>
+        <div class="form-group ">
           <p>What is your favorite color?</p>
           <input type="text" class="form-control" id="favorite-color">
         </div>
@@ -37,13 +34,13 @@
         <label for="age">Age</label>
         <input id="age" type="text">
         <label for="gender">Gender you're looking for</label>
-        <select id="gender">
+        <select class="form-control-bg" id="gender">
           <option value="female">Female</option>
           <option value="male">Male</option>
           <option value="undecided">No preference</option>
         </select>
 
-        <button type="submit" class="btn">Calculate my date</button>
+        <button type="submit" class="btn btn-lg">Calculate my date</button>
       </form>
 
       <div id="quote">
@@ -54,6 +51,28 @@
         <p>Your age is <span id="age-input"></span> </p>
         <h2>your dream date is <span id="answer"></span> </h2>
       </div>
+
+      <div class="img">
+        <div id="vlad">
+          <img src="img/vlad.jpg">
+        </div>
+        <div id="henry">
+          <img src="img/henry.jpg">
+        </div>
+        <div id="george">
+          <img src="img/george.jpg">
+        </div>
+        <div id="joan">
+          <img src="img/joan.jpg">
+        </div>
+        <div id="eleanor">
+          <img src="img/eleanor.jpg">
+        </div>
+        <div id="victoria">
+          <img src="img/victoria.jpg">
+        </div>
+      </div>
+
     </div>
   </body>
 </html>
